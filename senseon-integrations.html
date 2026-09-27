@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SenseOn: Integrations Redesign &middot; Cristina Viganò</title>
+        <meta name="description" content="SenseOn is a cybersecurity startup offering a cutting-edge platform that aggregates telemetry data from endpoints, networks, and the cloud. By consolidating this information, Sense" />
+        <meta name="theme-color" content="#fbfaf6" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <a href="#main" class="skip-link">Skip to content</a>
+
+        <header class="site-header">
+            <div class="container">
+                <nav class="site-nav" aria-label="Primary">
+                    <a href="index.html" class="site-name">Cristina Viganò</a>
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html" aria-current="page">Projects</a></li>
+                        <li><a href="fun.html">Fun</a></li>
+                        <li><a href="contact.html">Get in touch</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main">
+            <section class="hero">
+                <div class="container">
+                    <p class="case-back">
+                        <a href="projects.html"><span aria-hidden="true">&larr;</span> Back to all projects</a>
+                    </p>
+                    <p class="eyebrow">2025 &middot; SenseOn</p>
+                    <h1>SenseOn: Integrations Redesign</h1>
+                    <p class="body-lead case-lead">Empowering security teams through seamless third-party integrations</p>
+                    <ul class="case-tags"><li>Strategy</li><li>Product</li><li>Ux/ui</li></ul>
+                </div>
+            </section>
+
+            <section class="case-intro-section">
+                <div class="container">
+                    <div class="case-narrative">
+                        <h3 class="case-narrative__label">About senseon</h3>
+                        <p>SenseOn is a cybersecurity startup offering a cutting-edge platform that aggregates telemetry data from endpoints, networks, and the cloud. By consolidating this information, SenseOn reduces noise and empowers security analysts to focus on the most critical security events, enhancing their operational efficiency.</p>
+                    </div>
+                    <div class="case-narrative">
+                        <h3 class="case-narrative__label">The problem</h3>
+                        <p>There was a growing demand to integrate third party tools into SenseOn so it could be used as a single pane of glass, allowing analysts to view and act on all security related alerts in one place. Without this capability, analysts were required to move between multiple products, leading to alert fatigue, duplicated investigations, repeated checks across different sources of telemetry, and duplicated alerts.</p>
+                        <p>Although SenseOn already offered a limited number of integrations, the adoption on this functionality was low.</p>
+                    </div>
+                    <div class="case-narrative">
+                        <h3 class="case-narrative__label">My role</h3>
+                        <p>As the product designer on this project, I worked closely with the product manager and the development team to map out the integration journey, identify user needs, and deliver a cohesive, user-centred solution.</p>
+                    </div>
+                    <div class="case-narrative">
+                        <h3 class="case-narrative__label">Challenges</h3>
+                        <ul class="case-list">
+                            <li>Simplifying the integration setup experience.</li>
+                            <li>Creating and delivering designs rapidly to meet tight deadlines (deliver within the quarter).</li>
+                            <li>Evolving the platform to support a growing customer demand for third-party data enrichment.</li>
+                        </ul>
+                    </div>
+                    <div class="case-narrative">
+                        <h3 class="case-narrative__label">Results</h3>
+                        <ul class="case-list">
+                            <li>Contributed ~80% of upsell revenue through key integrations</li>
+                            <li>Driven a Product-Led-Growth motion in which customers can set up integrations autonomously for the first time</li>
+                            <li>Contributed to conversion rate improvement through clear demonstration of integrations (Integration page + Investigate redesign)</li>
+                            <li>Reduced time to create integrations from multiple quarters to weeks</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-body">
+                <div class="container">
+                <ol class="project-timeline" aria-label="Project timeline">
+                    <li>
+                        <a href="#discovery">
+                            <p class="project-timeline__phase">Discovery</p>
+                            <p class="project-timeline__note">User interviews, SOC feedback, understanding pain points.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#stage-1">
+                            <p class="project-timeline__phase">Redesigning the experience</p>
+                            <p class="project-timeline__note">A modern, discoverable integrations UI.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#stage-2">
+                            <p class="project-timeline__phase">EDR integrations</p>
+                            <p class="project-timeline__note">Microsoft Defender first, response actions in-platform.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#stage-3">
+                            <p class="project-timeline__phase">Identity integrations</p>
+                            <p class="project-timeline__note">Identities page, containment actions, richer user context.</p>
+                        </a>
+                    </li>
+                </ol>
+                <div class="case-narrative">
+                    <h2 id="discovery">Discovery: Understanding the problem</h2>
+                    <p>Through user interviews and internal feedback sessions (including with our SOC team), several key themes emerged:</p>
+                    <ul class="case-list">
+                        <li>The platform’s integrations were difficult to find and understand: Integrations were hidden within the settings menu, meaning customers were often unaware that this functionality existed. In addition, integrations that had not yet been configured were hidden by default, making it unclear which options were available.</li>
+                        <li>Complicated Setup Process: The integration setup journey was unintuitive, leading to user frustration and increased reliance on support.</li>
+                        <li>Our customers increasingly expected to use SenseOn as a single pane of glass, but the integration options were really limited.</li>
+                        <li>The existing UI felt outdated and inconsistent with the rest of the platform.</li>
+                    </ul>
+                </div>
+                <figure class="case-figure case-figure--blend">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/01.png" alt="SenseOn: Integrations Redesign. Discovery: Understanding the problem. Image 1." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <hr class="case-divider" />
+                <div class="case-narrative">
+                    <h2 id="stage-1">Stage 1: Redesigning the Integration Experience</h2>
+                    <p>First, I focused on redesigning the existing UI. The goals of this phase were to:</p>
+                    <ul class="case-list">
+                        <li>Make the UI more usable and modern, while maximising product-led growth</li>
+                        <li>Improve the visibility and discoverability of the feature</li>
+                        <li>Use the UI to gather insight into which integrations customers would have liked to see included in the product</li>
+                    </ul>
+                </div>
+                <div class="case-narrative">
+                    <h3 class="case-narrative__label">First concepts</h3>
+                    <p>I analysed the current flow and created a new low fidelity design, which I used to start a conversation with users, develoeprs and stakeholder.</p>
+                </div>
+                <figure class="case-figure">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/02.png" alt="SenseOn: Integrations Redesign. First concepts. Image 2." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <div class="case-narrative">
+                    <h3 class="case-narrative__label">Design iteration</h3>
+                    <p>Following user testing and stakeholders’ and developers’ feedback, I introduced several key updates:</p>
+                    <ul class="case-list">
+                        <li>Clear Status Indicators
+Users could easily distinguish between integrations that were already active and those requiring configuration. Moreover, customers needed the possibility of connecting to the same integration multiple times.</li>
+                        <li>Logical Grouping
+Integrations were grouped into categories to aid navigation. Microsoft integrations were surfaced more prominently, aligning with our Ideal Customer Profile</li>
+                        <li>Navigation Shift
+Based on research highlighting the importance of integrations in customer workflows, we moved the page from the Settings area to the main navigation. This reflected the platform’s strategic direction, positioning integrations as a core part of the SenseOn experience, especially as customers increasingly looked to use it as a single pane of glass</li>
+                    </ul>
+                    <p>Finally, I added the elements that would allow us to drive some product-led growth:</p>
+                    <ul class="case-list">
+                        <li>Integration Request Tile and Coming Soon Tiles
+Dedicated tiles allowed users to request new integrations, helping us prioritise development based on actual demand</li>
+                    </ul>
+                </div>
+                <figure class="case-figure case-figure--blend">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/03.png" alt="SenseOn: Integrations Redesign. Design iteration. Image 3." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="case-figure case-figure--blend">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/04.png" alt="SenseOn: Integrations Redesign. Design iteration. Image 4." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <div class="case-narrative">
+                    <h3 class="case-narrative__label">Delivery</h3>
+                    <p>I worked closely with developers to support implementation, respond to technical constraints, and ensure the designs were accurately translated into production.</p>
+                </div>
+                <figure class="case-figure case-figure--blend">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/05.png" alt="SenseOn: Integrations Redesign. Delivery. Image 5." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <div class="case-narrative">
+                    <h3 class="case-narrative__label">Design system</h3>
+                    <p>I also updated our design system with the new components, setting a standard for future platform expansions.</p>
+                </div>
+                <figure class="case-figure">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/06.jpg" alt="SenseOn: Integrations Redesign. Design system. Image 6." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <hr class="case-divider" />
+                <div class="case-narrative">
+                    <h2 id="stage-2">Stage 2: EDR Integrations</h2>
+                    <p>After Stage 1, we shifted focus to enabling deeper operational workflows, beginning with Endpoint Detection and Response (EDR).</p>
+                </div>
+                <div class="case-narrative">
+                    <h3 class="case-narrative__label">Why edr first?</h3>
+                    <p>Microsoft Defender emerged as the most requested integration via the new request tile. This was unsurprising given that our Ideal Customer Profile is Microsoft-centric.</p>
+                </div>
+                <figure class="case-figure case-figure--small">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/07.jpg" alt="SenseOn: Integrations Redesign. Why edr first?. Image 7." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <div class="case-narrative">
+                    <h3 class="case-narrative__label">What changed</h3>
+                    <ul class="case-list">
+                        <li>Enabled new tiles for supported EDR platforms, beginning with Microsoft Defender</li>
+                        <li>Updated the Investigate UI to:Surface third-party device telemetry directly within cases</li>
+                        <li>Allow analysts to take response actions (e.g. isolate a device) without switching tools</li>
+                    </ul>
+                    <p>Updated the Investigate UI to:</p>
+                    <p>Surface third-party device telemetry directly within cases</p>
+                    <p>These updates positioned SenseOn as more than just a detection tool, it became a better response platform that streamlined analyst workflows across integrations.</p>
+                </div>
+                <figure class="case-figure case-figure--blend">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/08.png" alt="SenseOn: Integrations Redesign. What changed. Image 8." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <hr class="case-divider" />
+                <div class="case-narrative">
+                    <h2 id="stage-3">Stage 3: Identity Integrations</h2>
+                    <p>As Microsoft 365 alert adoption grew (enabled by the Stage 1 improvements), we noticed a shift: more investigations were centred around users, not devices.</p>
+                </div>
+                <div class="case-narrative">
+                    <h3 class="case-narrative__label">Why identity became a priority</h3>
+                    <ul class="case-list">
+                        <li>M365 telemetry led to a surge in user-related cases</li>
+                        <li>SOC analysts needed richer user context to assess threats (e.g. knowing whether a user is a developer vs an HR employee)</li>
+                        <li>Containment actions like disabling accounts or revoking sessions became increasingly important</li>
+                    </ul>
+                </div>
+                <div class="case-narrative">
+                    <h3 class="case-narrative__label">Key outcomes</h3>
+                    <ul class="case-list">
+                        <li>We integrated identity providers like Microsoft and Okta</li>
+                        <li>For Microsoft-connected environments, user details and response actions were automatically surfaced within investigations</li>
+                        <li>For other providers, we launched a brand-new “Identities” page where users could:Search for identity data using usernames</li>
+                        <li>Perform containment actions such as disabling accounts</li>
+                    </ul>
+                    <p>For other providers, we launched a brand-new “Identities” page where users could:</p>
+                    <p>Search for identity data using usernames</p>
+                    <p>The Identities page was a major new feature for the platform. We launched it with a simple, focused UI, enabling us to observe usage patterns and determine future enhancements.</p>
+                    <p>All designs were creating also in dark mode, to maximise accessibility and customisation.</p>
+                </div>
+                <figure class="case-figure case-figure--blend">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/09.png" alt="SenseOn: Integrations Redesign. Key outcomes. Image 9." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="case-figure case-figure--blend">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/10.png" alt="SenseOn: Integrations Redesign. Key outcomes. Image 10." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="case-figure">
+                    <div class="case-figure__media">
+                        <picture>
+                            <img src="images/senseon-integrations/11.jpg" alt="SenseOn: Integrations Redesign. Key outcomes. Image 11." loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                </figure>
+                <hr class="case-divider" />
+                <div class="case-narrative">
+                    <h2>Results</h2>
+                    <ul class="case-list">
+                        <li>The integrations redesign delivered substantial product and business value, transforming how customers interact with and derive value from SenseOn’s platform:</li>
+                    </ul>
+                    <ul class="case-list">
+                        <li>Drove revenue growth through integrations
+The redesigned integration experience became a key revenue driver, contributing approximately 80 % of upsell revenue through strategic integration visibility and embedding within the core product experience.</li>
+                        <li>Accelerated Product-Led Growth adoption
+For the first time, customers could discover and configure integrations autonomously, reducing reliance on sales or support and enabling a scalable self-serve motion that supported the company’s broader Product-Led Growth strategy.</li>
+                        <li>Improved conversion through clearer product value
+By surfacing integrations more effectively (via the new Integration page) and enhancing contextual visibility in the Investigate workspace, the product demonstrated its extensibility, contributing to higher conversion rates across key user journeys.</li>
+                        <li>Dramatically reduced integration delivery time
+What previously took multiple quarters to design and ship could now be delivered in weeks, thanks to streamlined workflows, modular UI components, and closer collaboration with engineering.</li>
+                    </ul>
+                </div>
+                <hr class="case-divider" />
+                <div class="case-narrative">
+                    <h2>Testimonials</h2>
+                </div>
+                <blockquote class="case-quote">
+                    I’d like to say a huge thanks to Cristina
+for the volume and quality of work she’s delivered this week.
+The last minute changes/additions to the new integrations page have massively elevated its quality- it’s real product craft.
+She’s even managed to balance the integrations workload with other areas, like changes to the AI designs.
+All of this without (seemingly) breaking a sweat! Thank you Cristina!
+                    <cite>Dan Harrison, Product Manager</cite>
+                </blockquote>
+                </div>
+            </section>
+
+            <section class="case-next">
+                <div class="container">
+                    <a href="senseon-brand.html">
+                        <p class="case-next__label">Next project</p>
+                        <span class="case-next__title">SenseOn Rebrand</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-row">
+                <p>&copy; 2026 Cristina Viganò</p>
+                <p>
+                    <a href="mailto:cr.vigano@gmail.com">cr.vigano@gmail.com</a>
+                    &nbsp;&middot;&nbsp;
+                    <a href="https://www.linkedin.com/in/cristinavigano/" rel="me noopener">LinkedIn</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
