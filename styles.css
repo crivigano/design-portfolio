@@ -3,17 +3,35 @@
    Minimal, refined, AA-accessible, low-carbon.
    ------------------------------------------------------------------------- */
 
-/* Type: Inter (Google Fonts). A close free stand-in for Suisse Int'l. */
+/* Type: Inter for text and Fraunces for headings, both self-hosted as
+   Latin-only WOFF2 (Fraunces is a free stand-in for Cooper). */
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("fonts/inter-latin.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("fonts/fraunces-latin.woff2") format("woff2");
+}
 
 :root {
-    --bg: #fbfaf6;
+    --bg: #f5f3f5;
     --ink: #1a1a1a;
     --muted: #616161;
     --line: #e5e2d9;
     --accent: #3c1030;
+    --plum: #3c1030;
+    --brick: #c84e3e;
+    --intro-bg: #ebe7ec;
 
-    --serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Helvetica, Arial, sans-serif;
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
     --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
         Helvetica, Arial, sans-serif;
 
@@ -460,7 +478,7 @@ main {
 .work-card {
     background: var(--card-bg, #eeeae0);
     color: var(--card-fg, var(--ink));
-    border-radius: 6px;
+    border-radius: 10px;
     padding: var(--space-m);
     display: grid;
     grid-template-columns: 1fr;
@@ -641,9 +659,13 @@ main {
 }
 
 .case-intro-section {
-    background: #f0ede4;
+    background: var(--intro-bg);
     padding-block: var(--space-xl);
-    margin-block-start: var(--space-l);
+}
+
+/* The hero's curved edge opens onto the intro panel, with no gap between. */
+.hero:has(+ .case-intro-section) {
+    background-color: var(--intro-bg);
 }
 
 .case-intro-section > .container {
@@ -1425,4 +1447,330 @@ main {
     a {
         text-decoration-color: var(--ink);
     }
+}
+
+/* -------------------------------------------------------------------------
+   Site design: plum hero with a curved edge, serif headings, case tiles.
+   ------------------------------------------------------------------------- */
+.site-header {
+    padding-block: 1.75rem;
+}
+
+.site-name,
+.nav-list {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+    color: var(--ink);
+}
+
+.eyebrow {
+    font-family: var(--serif);
+}
+
+h1 {
+    font-weight: 400;
+    letter-spacing: -0.015em;
+}
+
+h2 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Hero */
+.hero {
+    color: #fff;
+    background: url("images/hero-bg.svg") center top / 100% 100% no-repeat;
+    padding-block: 4rem 6rem;
+}
+
+@media (min-width: 48rem) {
+    .hero {
+        padding-block: 4.5rem 8rem;
+    }
+
+    .home .hero {
+        padding-block: 6.5rem 9.5rem;
+    }
+}
+
+.hero .eyebrow,
+.hero .body-lead,
+.hero .case-lead {
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: clamp(3.25rem, 8vw, 7rem);
+    line-height: 1.08;
+    margin-bottom: var(--space-m);
+}
+
+/* Two lines at every width: the size follows the space the longer line needs. */
+.home .hero h1 {
+    font-size: min(7rem, calc((100vw - 3rem) / 8.1));
+}
+
+@media (min-width: 48rem) {
+    .home .hero h1 {
+        font-size: min(7rem, calc((100vw - 6rem) / 8.1));
+    }
+}
+
+@media (min-width: 80rem) {
+    .home .hero h1 {
+        font-size: min(7rem, calc((100vw - 8rem) / 8.1));
+    }
+}
+
+.hero .body-lead {
+    max-width: 43.5rem;
+    margin-top: 0;
+}
+
+.hero .body-lead + .body-lead {
+    margin-top: var(--space-s);
+}
+
+.hero .case-back,
+.hero .case-back a {
+    color: #fff;
+}
+
+.hero .case-back a {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero .case-back a:hover,
+.hero .case-back a:focus-visible {
+    border-bottom-color: #fff;
+}
+
+.hero .case-tags li {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero a:focus-visible {
+    outline-color: #fff;
+}
+
+.mark {
+    --bar: 0.134em;
+    --hl: 0.62em;
+    --p: 0;
+    background: linear-gradient(var(--brick), var(--brick)) no-repeat
+        0 calc(88% - 4% * var(--p)) / 100%
+        calc(var(--bar) + (var(--hl) - var(--bar)) * var(--p));
+    transition: background-size 2.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+        background-position 2.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.mark + .mark {
+    transition-delay: 0.5s;
+}
+
+.hl-on .mark {
+    --p: 1;
+}
+
+/* The underline grows into a highlight behind the words shortly after load.
+   Script adds .hl-on to the body. */
+@media (prefers-reduced-motion: reduce) {
+    .mark {
+        --p: 0 !important;
+        transition: none;
+    }
+}
+
+.cta--light {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.cta--light::after {
+    color: #fff;
+}
+
+.cta--light:hover,
+.cta--light:focus-visible {
+    color: #fff;
+    border-bottom-width: 2px;
+}
+
+.hero .cta {
+    margin-top: var(--space-m);
+}
+
+.home a:focus-visible {
+    outline-color: var(--brick);
+}
+
+.fun-band a:focus-visible {
+    outline-color: #fff;
+}
+
+/* Section headings */
+.section-title {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.home .section-title {
+    font-size: clamp(2.75rem, 5vw + 1rem, 4.75rem);
+    margin-bottom: 0;
+}
+
+.home .section + .section {
+    border-top: 0;
+}
+
+/* Case cards */
+.work-list {
+    gap: 3rem;
+    margin-top: var(--space-l);
+}
+
+.work-card {
+    isolation: isolate;
+    border-radius: 10px;
+    padding: var(--space-l) var(--space-m) 0;
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: var(--space-m);
+    align-items: start;
+}
+
+.work-card__logo {
+    display: block;
+    height: 1.4375rem;
+    width: auto;
+    margin-bottom: 0.875rem;
+}
+
+.work-card__logo--tall {
+    height: 2.5rem;
+}
+
+.work-card__title {
+    font-size: clamp(2rem, 2vw + 1.25rem, 3rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    max-width: 8em;
+}
+
+.work-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4375rem;
+    margin-top: 0.875rem;
+}
+
+.work-card__tags li {
+    padding: 0.28rem 0.8125rem 0.33rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-family: var(--serif);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.work-card__media {
+    aspect-ratio: 650 / 514;
+    margin-inline: -1.75rem;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.work-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+}
+
+@media (min-width: 48rem) {
+    .work-card {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: stretch;
+        min-height: 32.125rem;
+        padding: 0 0 0 5rem;
+    }
+
+    .work-card__text {
+        justify-content: center;
+        padding-block: var(--space-l);
+        max-width: 42%;
+    }
+
+    .work-card__media {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 58%;
+        aspect-ratio: auto;
+        margin: 0;
+        z-index: -1;
+    }
+}
+
+.work-card:hover,
+.work-card:focus-within {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Fun projects band */
+.fun-band {
+    background: var(--plum);
+    color: #fff;
+    padding-block: 5rem;
+}
+
+.fun-band .eyebrow,
+.fun-band .fun-intro {
+    color: #dedede;
+}
+
+.fun-band .section-title {
+    margin-bottom: 0;
+}
+
+.fun-band .fun-intro {
+    margin-top: var(--space-m);
+    max-width: 44ch;
+}
+
+.fun-band .cta {
+    margin-top: var(--space-m);
+}
+
+.home .site-footer {
+    margin-top: 0;
+    border-top: 1px solid var(--line);
+}
+
+/* Tile hover: the image eases in slightly and the title is underlined. */
+.work-card__media img {
+    transition: transform 700ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.work-card:hover .work-card__media img,
+.work-card:focus-within .work-card__media img {
+    transform: scale(1.04);
+}
+
+.work-card:hover .work-card__title a,
+.work-card:focus-within .work-card__title a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
 }
