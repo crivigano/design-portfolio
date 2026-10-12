@@ -1453,14 +1453,44 @@ main {
    Site design: plum hero with a curved edge, serif headings, case tiles.
    ------------------------------------------------------------------------- */
 .site-header {
-    padding-block: 1.75rem;
+    padding-block: 1rem;
+}
+
+/* One line at every width. The text scales down on small screens and the
+   links keep a 44px tall tap area. */
+.site-nav {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .site-name,
 .nav-list {
     font-family: var(--serif);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 3.4vw, 1.25rem);
+}
+
+.nav-list {
+    flex-wrap: nowrap;
+    gap: clamp(0.5rem, 2.4vw, 1.75rem);
+    white-space: nowrap;
+}
+
+.site-name,
+.nav-list a {
+    display: inline-block;
+    padding-block: 0.75rem;
+}
+
+.site-name {
+    white-space: nowrap;
+}
+
+@media (max-width: 22.5rem) {
+    .site-nav {
+        flex-wrap: wrap;
+    }
 }
 
 .nav-list a:hover,
@@ -1679,11 +1709,12 @@ h2 {
     font-size: 0.7rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    opacity: 0.85;
+    opacity: 1;
 }
 
 .work-card__media {
     aspect-ratio: 650 / 514;
+    width: auto;
     margin-inline: -1.75rem;
     overflow: hidden;
     border-radius: 0;
