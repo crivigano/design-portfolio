@@ -8,20 +8,24 @@
             name="description"
             content="Cristina Viganò is a UX and product designer who combines cognitive psychology with more than a decade of design practice."
         />
-        <meta name="theme-color" content="#fbfaf6" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <meta name="theme-color" content="#f5f3f5" />
         <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
+            rel="preload"
+            href="fonts/inter-latin.woff2"
+            as="font"
+            type="font/woff2"
             crossorigin
         />
         <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+            rel="preload"
+            href="fonts/fraunces-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
         />
         <link rel="stylesheet" href="styles.css" />
     </head>
-    <body>
+    <body class="home">
         <a href="#main" class="skip-link">Skip to content</a>
 
         <header class="site-header">
@@ -43,10 +47,13 @@
         </header>
 
         <main id="main">
-            <section class="hero">
+            <section class="hero home-hero">
                 <div class="container">
                     <p class="eyebrow">UX and product design</p>
-                    <h1>Design that starts with people.</h1>
+                    <h1>
+                        <span class="mark">Design</span> that starts<br />
+                        with <span class="mark">people</span>.
+                    </h1>
                     <p class="body-lead">
                         I am a UX and product designer with a background in
                         cognitive psychology, a strong interest in sustainability and ethics,
@@ -54,7 +61,7 @@
                         to make products that are useful and
                         meaningful.
                     </p>
-                    <a href="contact.html" class="cta">A little about me</a>
+                    <a href="contact.html" class="cta cta--light">A little about me</a>
                 </div>
             </section>
 
@@ -72,9 +79,7 @@
                                 style="--card-bg: #2e2a5d; --card-fg: #ffffff"
                             >
                                 <div class="work-card__text">
-                                    <p class="work-card__eyebrow">
-                                        2025 &middot; SenseOn
-                                    </p>
+                                    <img class="work-card__logo" src="images/logos/senseon-light.svg" alt="SenseOn" width="95" height="23" />
                                     <h3 class="work-card__title">
                                         <a
                                             href="senseon-integrations.html"
@@ -82,23 +87,21 @@
                                             cybersecurity platform</a
                                         >
                                     </h3>
-                                    <span class="work-card__tag"
-                                        >Product design</span
-                                    >
+                                    <ul class="work-card__tags"><li>Product design</li><li>B2B</li><li>Cybersecurity</li></ul>
                                 </div>
                                 <div class="work-card__media">
                                     <picture>
                                         <source
-                                            srcset="images/senseon-integrations.avif"
+                                            srcset="images/cards/senseon-integrations.avif"
                                             type="image/avif"
                                         />
                                         <img
-                                            src="images/senseon-integrations.jpg"
+                                            src="images/cards/senseon-integrations.webp"
                                             alt="Preview of the SenseOn integrations redesign case study"
                                             loading="lazy"
                                             decoding="async"
-                                            width="1200"
-                                            height="900"
+                                            width="650"
+                                            height="514"
                                         />
                                     </picture>
                                 </div>
@@ -111,9 +114,7 @@
                                 style="--card-bg: #0e6fbe; --card-fg: #ffffff"
                             >
                                 <div class="work-card__text">
-                                    <p class="work-card__eyebrow">
-                                        2023 &middot; CCleaner
-                                    </p>
+                                    <img class="work-card__logo" src="images/logos/ccleaner.webp" alt="CCleaner" width="92" height="23" />
                                     <h3 class="work-card__title">
                                         <a
                                             href="ccleaner-main.html"
@@ -121,23 +122,21 @@
                                             desktop app</a
                                         >
                                     </h3>
-                                    <span class="work-card__tag"
-                                        >Product design</span
-                                    >
+                                    <ul class="work-card__tags"><li>Product design</li><li>B2C</li><li>IT</li></ul>
                                 </div>
                                 <div class="work-card__media">
                                     <picture>
                                         <source
-                                            srcset="images/ccleaner-main.avif"
+                                            srcset="images/cards/ccleaner-main.avif"
                                             type="image/avif"
                                         />
                                         <img
-                                            src="images/ccleaner-main.jpg"
+                                            src="images/cards/ccleaner-main.webp"
                                             alt="Preview of the CCleaner health check case study"
                                             loading="lazy"
                                             decoding="async"
-                                            width="1200"
-                                            height="900"
+                                            width="650"
+                                            height="514"
                                         />
                                     </picture>
                                 </div>
@@ -150,9 +149,7 @@
                                 style="--card-bg: #6bdbd5; --card-fg: #0d1a1f"
                             >
                                 <div class="work-card__text">
-                                    <p class="work-card__eyebrow">
-                                        2025 &middot; SenseOn
-                                    </p>
+                                    <img class="work-card__logo" src="images/logos/senseon-dark.svg" alt="SenseOn" width="95" height="23" />
                                     <h3 class="work-card__title">
                                         <a
                                             href="senseon-brand.html"
@@ -160,23 +157,21 @@
                                             &ldquo;boring&rdquo; industry</a
                                         >
                                     </h3>
-                                    <span class="work-card__tag"
-                                        >Brand and product</span
-                                    >
+                                    <ul class="work-card__tags"><li>Brand &amp; website</li><li>B2B</li><li>Cybersecurity</li></ul>
                                 </div>
                                 <div class="work-card__media">
                                     <picture>
                                         <source
-                                            srcset="images/senseon-brand.avif"
+                                            srcset="images/cards/senseon-brand.avif"
                                             type="image/avif"
                                         />
                                         <img
-                                            src="images/senseon-brand.jpg"
+                                            src="images/cards/senseon-brand.webp"
                                             alt="Preview of the SenseOn rebranding case study"
                                             loading="lazy"
                                             decoding="async"
-                                            width="1200"
-                                            height="900"
+                                            width="650"
+                                            height="514"
                                         />
                                     </picture>
                                 </div>
@@ -188,7 +183,7 @@
                 </div>
             </section>
 
-            <section class="section" aria-labelledby="fun">
+            <section class="section fun-band" aria-labelledby="fun">
                 <div class="container">
                     <p class="eyebrow">On the side</p>
                     <h2 id="fun" class="section-title">Fun projects</h2>
@@ -196,7 +191,7 @@
                         Have a look at some creative projects I worked on, outside of my day job. All are made with
                         care.
                     </p>
-                    <a href="fun.html" class="cta">Explore fun projects</a>
+                    <a href="fun.html" class="cta cta--light">Explore fun projects</a>
                 </div>
             </section>
 
@@ -220,5 +215,12 @@
                 </p>
             </div>
         </footer>
+        <script>
+            window.addEventListener("load", function () {
+                setTimeout(function () {
+                    document.body.classList.add("hl-on");
+                }, 400);
+            });
+        </script>
     </body>
 </html>
