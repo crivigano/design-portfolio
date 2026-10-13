@@ -52,7 +52,7 @@
             <section class="hero">
                 <div class="container">
                     <p class="eyebrow">A little bit about me</p>
-                    <h1>Hello.</h1>
+                    <h1><span class="mark">Hello</span>.</h1>
                     <p class="body-lead">
                         I’m a UX and product designer who puts people first and designs to make a meaningful, positive impact. 
                         My strength lies in understanding what users truly need and applying strategic thinking to create solutions that work for them and the business.
@@ -126,5 +126,12 @@
                 </p>
             </div>
         </footer>
+        <script>
+            window.addEventListener("load", function () {
+                setTimeout(function () {
+                    document.body.classList.add("hl-on");
+                }, 400);
+            });
+        </script>
     </body>
 </html>
