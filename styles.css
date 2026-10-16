@@ -668,6 +668,11 @@ main {
     background-color: var(--intro-bg);
 }
 
+/* Same on the Fun page, where the first accordion band is white. */
+.hero:has(+ .fun-accordions) {
+    background-color: #fff;
+}
+
 .case-intro-section > .container {
     display: flex;
     flex-direction: column;
@@ -1412,12 +1417,20 @@ main {
     flex-direction: column;
 }
 
-.accordion {
-    border-top: 1px solid var(--line);
+.fun-accordions {
+    padding-block: 0;
+    overflow-x: clip;
 }
 
-.accordion:last-of-type {
-    border-bottom: 1px solid var(--line);
+.accordion {
+    background: #fff;
+    box-shadow: 0 0 0 100vmax #fff;
+    clip-path: inset(0 -100vmax);
+}
+
+.accordion:nth-of-type(even) {
+    background: var(--intro-bg);
+    box-shadow: 0 0 0 100vmax var(--intro-bg);
 }
 
 .accordion__summary {
