@@ -23,6 +23,8 @@
             type="font/woff2"
             crossorigin
         />
+        <script>document.documentElement.classList.add("js");</script>
+        <script src="nav.js" defer></script>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body class="home">
@@ -34,7 +36,16 @@
                     <a href="index.html" class="site-name"
                         >Cristina Viganò</a
                     >
-                    <ul class="nav-list">
+                    <button
+                        class="nav-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="site-menu"
+                        aria-label="Open menu"
+                    >
+                        <span class="nav-toggle__bars" aria-hidden="true"></span>
+                    </button>
+                    <ul class="nav-list" id="site-menu">
                         <li>
                             <a href="index.html" aria-current="page">Home</a>
                         </li>
